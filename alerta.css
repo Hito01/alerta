@@ -1,0 +1,66 @@
+body{
+  background-image: url('img/df.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  display: grid;
+  place-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  gap: 50px;
+}
+
+.clica{
+  justify-self: center;
+  align-self: center;
+  font-size: 30pt;
+  margin-top: 20px;
+  animation: alerta1 800ms 1.5s cubic-bezier(.100, .15, .15, .100) infinite alternate;
+}
+
+.clica1, .nada1{
+  margin-top: 110px;
+}
+
+.alerta{border-radius: 5px;}
+
+.container .alerta, .alerta1{
+  padding: 10px;
+  border: 1.5px solid red;
+}
+
+.alerta1{
+  text-align: center;
+  background-color: red;
+  color: white;
+  animation: alerta 1ms cubic-bezier(.20, .21, .45, .10) infinite;
+}
+
+.nada{
+  font-family: verdana;
+  padding: 10px;
+  border: 2.5px double red;
+  background-color: red;
+  border-radius: 30px;
+  border-color: darkred;
+  color: white;
+  font-size: 20pt;
+  /*animation: grow 800ms 1.9s cubic-bezier(.99, .16, .16, .99) infinite;*/
+}
+
+/*ANIMAÇÕES*/
+@keyframes alerta{
+  to{transform: scale(0.9);}
+}
+
+@keyframes grow{
+  to{transform: scale(0.9);}
+}
+
+@keyframes alerta1{
+  from{transform: translate(0);}
+  to{transform: translateY(160px);}
+}
